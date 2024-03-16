@@ -1,8 +1,4 @@
-<?php
-include('trip.php')
-?>
 
-<!doctype html>
 <html lang="pl">
   <head>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
@@ -41,60 +37,59 @@ include('trip.php')
       </div>
     </nav>
     <div id="start" class="mb-5">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Niesamowite przeżycia!</h1>
-            </div>    
-          </div>
-          <div class="carousel-item">
-            <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Niesamowite widoki!</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h1>Niesamowite przeżycia!</h1>
+                </div>    
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h1>Piękno natury!</h1>
+            <div class="carousel-item">
+                <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h1>Niesamowite widoki!</h1>
+                </div>
             </div>
-          </div>
+            <div class="carousel-item">
+                <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h1>Piękno natury!</h1>
+                </div>
+            </div>
+            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     </div>
 
     <div id="wycieczki" class="container mb-5">
-      <div class="row">
-          <h1>Wycieczki</h1>
-      </div>
-      <div class="row">
-      <?php
-        // Dynamiczne generowanie kart na podstawie danych obiektów
-        foreach ($trips as $trip) 
-        {
-            echo '<div class="col-12 col-sm-6 col-lg-3">';
-              echo '<div class="card">';
-              echo '<img src="img/' . $trip->getImg() . '" class="card-img-top" alt="...">';
-                echo '<div class="card-body">';
-                echo '<h5 class="card-title">' . $trip->getName() . '</h5>';
-                echo '<p class="card-text">' . $trip->getDescription() . '</p>';
-                echo '<a href="#" class="btn btn-primary">Więcej szczegółów...</a>';
-                echo '</div>';
-              echo '</div>';
-            echo '</div>';
-        }
-        ?>
-      </div>
+    <div class="row">
+        <h1>Wycieczki</h1>
+    </div>
+    <div class="row">
+
+        {% for trip in trips %}
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card">
+                    <img src="{{ 'img/' ~ trip.getImg() }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ trip.getName() }}</h5>
+                        <p class="card-text">{{ trip.getDescription() }}</p>
+                        <a href="#" class="btn btn-primary">Więcej szczegółów...</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
   </div>
 
   <div id="cennik" class="container mt-5 mb-5">
@@ -113,16 +108,16 @@ include('trip.php')
             </tr>
         </thead>
         <tbody>
-        <?php foreach ($trips as $strip) : ?>
-          <tr>
-            <th scope="row"><?php print $strip->getId(); ?></th>
-            <td><?php print $strip->getName(); ?></td>
-            <td><?php print $strip->getContinent(); ?></td>
-            <td><?php print $strip->getCountry(); ?></td>
-            <td><?php print $strip->getPeriod(); ?> dni</td>
-            <td><?php print $strip->getPrice(); ?></td>
-          </tr>
-        <?php endforeach ?>
+            {% for trip in trips %}
+                <tr>
+                    <th scope="row">{{ trip.getId() }}</th>
+                    <td>{{ trip.getName() }}</td>
+                    <td>{{ trip.getContinent() }}</td>
+                    <td>{{ trip.getCountry() }}</td>
+                    <td>{{ trip.getPeriod() }}</td>
+                    <td>{{ trip.getPrice() }}</td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
   </div>
