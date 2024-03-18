@@ -46,7 +46,10 @@ catch (PDOException $e)
                 <?php foreach ($questions as $key => $question): ?>
                     <tr>
                         <th scope="row"><?php echo $key + 1; ?></th>
-                        <td><?php echo $question['comment']; ?></td>
+                        <!-- <td><?php echo $question['comment']; ?></td> -->
+                        <!-- htmlspecialchars pozwala nam na unikniecie atakow -->
+                        <!-- zamienia znaki specjalne na encje takie jak: (&lt;, &gt;, &amp;, &quot;) -->
+                        <td><?php echo htmlspecialchars($question['comment']); ?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
