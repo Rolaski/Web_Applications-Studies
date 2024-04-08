@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NameController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemperatureController;
 use illuminate\http\Request;
@@ -60,10 +61,11 @@ Route::get('/zad10', function (Request $request)
 });
 
 
-Route::get('/zad13', function (Request $request)
+
+Route::get('/zad13', [NameController::class,'show']);
+
+Route::get('/trips', function()
 {
-    $name = $request->name;
-    $arr = ['a', 'b', 'c', 'd', 'e'];
-    return view('zad13', ['name' => $name, 'arr' => $arr]);
+    return view('index');
 });
 
