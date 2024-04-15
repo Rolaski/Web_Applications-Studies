@@ -84,6 +84,9 @@
                     <td>{{$trip->country->name}}</td>
                     <td>{{$trip->period}} dni</td>
                     <td>{{$trip->price}} PLN</td>
+                    <td>
+                        <a href="{{ route('trips.edit', $trip->id) }}">Edytuj</a>
+                    </td>
                 </tr>
             @empty
                 <tr>

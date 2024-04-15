@@ -41,7 +41,6 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                    {{-- Dodaj pozostałe pola formularza --}}
                     <div class="form-group mb-2">
                         <label for="area" class="form-label">Powierzchnia</label>
                         <input id="area" name="area" type="text" class="form-control @error('area') is-invalid @enderror" value="{{ $country->area }}">

@@ -14,4 +14,8 @@ Route::controller(TripController::class)->group(function () {
 });
 
 Route::resource('countries', CountryController::class);
+Route::get('/trips/{id}/edit', [TripController::class, 'edit'])->name('trips.edit');
+Route::put('/trips/{id}', [TripController::class, 'update'])->name('trips.update');
+
+
 

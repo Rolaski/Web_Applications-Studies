@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\TripController;
 
 define('LARAVEL_START', microtime(true));
 
