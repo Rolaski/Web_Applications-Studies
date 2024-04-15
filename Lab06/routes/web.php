@@ -9,10 +9,10 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'trips'], function () {
     Route::get('/', [TripController::class, 'index'])->name('trips.index');
-    Route::get('/{id}', [TripController::class, 'show'])->name('trips.show');
+    Route::get('/user/{id}', [TripController::class, 'show'])->name('trips.show');
+    Route::get('/random', [TripController::class, 'randomTrips'])->name('trips.random');
+    Route::get('/cheapest', [TripController::class, 'cheapestTrips'])->name('trips.cheapest');
 });
 
-Route::get('/cheapest', [TripController::class, 'cheapestTrips'])->name('trips.cheapest');
-Route::get('/random', [TripController::class, 'randomTrips'])->name('trips.random');
 
 
