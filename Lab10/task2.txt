@@ -1,0 +1,48 @@
+Typ A - Domyślnie w formacie JSON
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A - Zwracanie odpowiedzi w formacie XML (w ciele zapytania)
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A?format=xml
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A - Zwracanie odpowiedzi w formacie XML (w nagłówku)
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A
+Dodaj nagłówek: Accept: application/xml
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ B
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/B
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ D
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/D
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A z trzech ostatnich dostępnych dni
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A/last/3
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A z dziś
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A/today
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A z 2 maja 2024
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A/2024-05-02
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A z 3 maja 2024
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A/2024-05-03
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A z dostępnych dni pomiędzy 29 kwi. 2024 a 5 maja 2024
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A?startDate=2024-04-29&endDate=2024-05-05
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A z dostępnych dni pomiędzy 1 sty. 2024 a 5 maja 2024
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A?startDate=2024-01-01&endDate=2024-05-05
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Typ A z dostępnych dni pomiędzy 1 sty. 2001 a 2 lut. 2001
+Żądanie: GET https://api.nbp.pl/api/exchangerates/tables/A?startDate=2001-01-01&endDate=2001-02-02
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)

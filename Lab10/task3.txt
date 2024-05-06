@@ -1,0 +1,47 @@
+Euro z tabeli A
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/EUR
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Euro z tabeli B
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/B/EUR
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Funt z tabeli A
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/GBP
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Funt z tabeli B
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/B/GBP
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+7 ostatnich kursów euro z tabeli A
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/EUR/last/7
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+256 ostatnich kursów euro z tabeli A
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/EUR/last/256
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Euro z tabeli A z dzisiaj
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/EUR/today
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Euro z tabeli A z 2 maja 2024
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/EUR/2024-05-02
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Euro z tabeli A z 3 maja 2024
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/EUR/2024-05-03
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Dolar amerykański z dostępnych dni pomiędzy 29 kwi. 2024 a 5 maja 2024
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/USD/2024-04-29/2024-05-05
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Dolar amerykański z dostępnych dni pomiędzy 1 sty. 2023 a 5 maja 2024
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/USD/2023-01-01/2024-05-05
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Dolar amerykański z dostępnych dni pomiędzy 1 sty. 2001 a 2 lut. 2001
+Żądanie: GET https://api.nbp.pl/api/exchangerates/rates/A/USD/2001-01-01/2001-02-02
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)

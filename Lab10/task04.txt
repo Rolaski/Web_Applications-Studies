@@ -1,0 +1,27 @@
+Aktualna cena złota
+Żądanie: GET https://api.nbp.pl/api/cenyzlota
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Ostatnie 7 notowań ceny złota
+Żądanie: GET https://api.nbp.pl/api/cenyzlota/last/7
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Ostatnie notowania ceny złota od 7 dni wstecz
+Żądanie: GET https://api.nbp.pl/api/cenyzlota/last/7
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Ostatnie 256 notowań ceny złota
+Żądanie: GET https://api.nbp.pl/api/cenyzlota/last/256
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Cena złota z 2 maja 2024
+Żądanie: GET https://api.nbp.pl/api/cenyzlota/2024-05-02
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Cena złota z 3 maja 2024
+Żądanie: GET https://api.nbp.pl/api/cenyzlota/2024-05-03
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
+
+Cena złota z dostępnych dni pomiędzy 29 kwi. 2024 a 5 maja 2024
+Żądanie: GET https://api.nbp.pl/api/cenyzlota/2024-04-29/2024-05-05
+Oczekiwany sukces: Status odpowiedzi 2XX (np. 200)
