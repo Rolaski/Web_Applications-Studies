@@ -1,0 +1,29 @@
+API (Application Programming Interface): Interfejs programowania aplikacji definiujący sposoby komunikacji między różnymi komponentami oprogramowania.
+
+WebAPI (API webowe/API internetowe/interfejsy webowe): API udostępniane przez aplikacje internetowe, które umożliwiają komunikację z nimi przez protokół HTTP.
+
+Publiczne a prywatne API: Publiczne API są dostępne publicznie dla wszystkich użytkowników, natomiast prywatne API są ograniczone do określonych użytkowników lub aplikacji.
+
+Ograniczenie liczby żądań (rate limit): Określona liczba żądań, które mogą być przesłane do API w określonym przedziale czasowym w celu kontrolowania obciążenia serwera.
+
+Dokumentacja API: Dokumentacja opisująca sposób używania API, zawierająca informacje o dostępnych endpointach, parametrach, typach zwracanych danych itp.
+
+Formaty danych wykorzystywane na potrzeby wymiany danych z API: Najczęściej używane formaty to JSON (JavaScript Object Notation) i XML (eXtensible Markup Language).
+
+Protokół HTTP: Protokół używany do przesyłania danych w internecie; składa się z żądań (request) i odpowiedzi (response), zdefiniowanych nagłówków i treścią.
+
+Przekazywanie parametrów w ścieżce URL (Path parameters): Parametry przekazywane w adresie URL, np. /users/{id}.
+
+Przekazywanie parametrów w query string’u (Query parameters): Parametry przekazywane w URL po znaku zapytania (?), np. /search?query=term.
+
+Grupy statusów (kodów) HTTP: Grupy kodów odpowiedzi HTTP, np. 2xx (sukces), 4xx (błąd klienta), 5xx (błąd serwera).
+
+Metody HTTP: GET i POST: GET służy do pobierania danych, POST do przesyłania danych do serwera.
+
+Inne metody HTTP: PUT, DELETE, PATCH, HEAD, OPTIONS: Metody do aktualizacji, usuwania, częściowej aktualizacji, pobierania nagłówków, opcji zasobu.
+
+**Jeszcze inne metody HTTP: CONNECT, TRACE, ***: Mniej używane metody, np. CONNECT dla tunelowania, TRACE dla diagnostyki.
+
+Nagłówek żądania Accept i jego wartości: Wskazuje, jakie typy treści klient jest w stanie obsłużyć, np. application/json.
+
+Nagłówek żądania/odpowiedzi Content-Type i jego wartości: Określa format danych wysyłanych lub odbieranych, np. application/json dla JSON.
