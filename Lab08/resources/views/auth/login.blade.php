@@ -1,44 +1,47 @@
-@include('shared.html')
+<x-guest-layout>
+    <!-- Session Status -->
+    <x-auth-session-status class="mb-4" :status="session('status')" />
 
-@include('shared.head', ['pageTitle' => 'Zaloguj się'])
+    <form method="POST" action="{{ route('login') }}">
+        @csrf
 
-<body>
-    @include('shared.navbar')
-
-    <div class="container mt-5 mb-5">
-
-        @include('shared.session-error')
-
-        <div class="row mt-4 mb-4 text-center">
-            <h1>Zaloguj się</h1>
+        <!-- Email Address -->
+        <div>
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        @include('shared.validation-error')
+        <!-- Password -->
+        <div class="mt-4">
+            <x-input-label for="password" :value="__('Password')" />
 
-        <div class="row d-flex justify-content-center">
-            <div class="col-10 col-sm-10 col-md-6 col-lg-4">
-                <form method="POST" action="{{ route('login.authenticate') }}" class="needs-validation" novalidate>
-                    @csrf
-                    <div class="form-group mb-2">
-                        <label for="email" class="form-label">Email</label>
-                        <input id="email" name="email" type="text" class="form-control @if ($errors->first('email')) is-invalid @endif" value="{{ old('email') }}">
-                        <div class="invalid-feedback">Nieprawidłowy email!</div>
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="continent" class="form-label">Hasło</label>
-                        <input id="password" name="password" type="password" class="form-control @if ($errors->first('password')) is-invalid @endif">
-                        <div class="invalid-feedback">Nieprawidłowe hasło!</div>
-                    </div>
-                    <div class="text-center mt-4 mb-4">
-                        <input class="btn btn-primary" type="submit" value="Wyślij">
-                    </div>
-                </form>
-            </div>
+            <x-text-input id="password" class="block mt-1 w-full"
+                            type="password"
+                            name="password"
+                            required autocomplete="current-password" />
+
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
-    </div>
 
-    @include('shared.footer')
-</body>
+        <!-- Remember Me -->
+        <div class="block mt-4">
+            <label for="remember_me" class="inline-flex items-center">
+                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
+                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+            </label>
+        </div>
 
-</html>
+        <div class="flex items-center justify-end mt-4">
+            @if (Route::has('password.request'))
+                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
+            @endif
 
+            <x-primary-button class="ms-3">
+                {{ __('Log in') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>

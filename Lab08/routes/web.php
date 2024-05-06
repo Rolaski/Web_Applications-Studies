@@ -1,29 +1,20 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CountryController;
-use App\Http\Controllers\TripController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::controller(TripController::class)->group(function () {
-    Route::get('/trips', 'index')->name('trips.index');
-    Route::get('/trips/{id}', 'show')->name('trips.show');
-    Route::get('/trips/{id}/edit', 'edit')->name('trips.edit');
-    Route::put('/trips/{id}', 'update')->name('trips.update');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('countries', CountryController::class)->middleware('auth');
-
-
-Route::controller(AuthController::class)->group(function () {
-    Route::get('/auth/login', 'login')->name('login');
-    Route::post('/auth/login', 'authenticate')->name('login.authenticate');
-    Route::get('/auth/logout', 'logout')->name('logout');
-});
-
-Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [AuthController::class, 'register']);
+require __DIR__.'/auth.php';
