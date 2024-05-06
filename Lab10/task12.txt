@@ -1,0 +1,51 @@
+1. Uzyskanie informacji o sobie:
+Metoda: GET
+URL: https://api.github.com/user
+
+2. Zaktualizowanie informacji o sobie (np. lokalizacja na PL):
+Metoda: PATCH
+URL: https://api.github.com/user
+Body (JSON):
+json
+Copy code
+{
+  "location": "PL"
+}
+
+3. Uzyskanie informacji o wszystkich swoich repozytoriach:
+Metoda: GET
+URL: https://api.github.com/user/repos
+
+4. Uzyskanie informacji o swoich prywatnych repozytoriach:
+Metoda: GET
+URL: https://api.github.com/user/repos?type=private
+
+5. Uzyskanie informacji o swoich publicznych repozytoriach:
+Metoda: GET
+URL: https://api.github.com/user/repos?type=public
+
+6. Utworzenie nowego prywatnego repozytorium:
+Metoda: POST
+URL: https://api.github.com/user/repos
+Body (JSON):
+json
+Copy code
+{
+  "name": "ai1-test",
+  "description": "This is AI1 Test repository!",
+  "private": true
+}
+
+7. Zaktualizowanie repozytorium na publiczne (częściowo):
+Metoda: PATCH
+URL: https://api.github.com/repos/YOUR_USERNAME/ai1-test
+Body (JSON):
+json
+Copy code
+{
+  "private": false
+}
+
+8. Usunięcie repozytorium:
+Metoda: DELETE
+URL: https://api.github.com/repos/YOUR_USERNAME/ai1-test
