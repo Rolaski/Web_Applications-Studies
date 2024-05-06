@@ -1,0 +1,15 @@
+https://api.github.com/gitignore/templates/Laravel
+https://api.github.com/repos/spetz/tokenmanager-sample
+https://api.github.com/repos/spetz/tokenmanager-sample/contents/README.md
+https://api.github.com/repos/spetz/tokenmanager-sample/contents/README.md?ref=master
+https://api.github.com/repos/passenger-stack/Passenger/contributors
+https://api.github.com/repos/passenger-stack/Passenger/collaborators/phuzarski
+https://api.github.com/users/phuzarski/following/spetz
+https://api.github.com/users/spetz/following/phuzarski
+https://api.github.com/repos/passenger-stack/Passenger/zipball
+https://api.github.com/repos/passenger-stack/Passenger/traffic/clones
+https://api.github.com/repos/passenger-stack/Passenger/commits
+https://api.github.com/repos/passenger-stack/Passenger/commits/b1c3a8011e585eba20d85ba3cdbc9f5dbe29f345
+https://api.github.com/repos/passenger-stack/Passenger/branches
+https://api.github.com/repos/passenger-stack/Passenger/branches/master
+https://api.github.com/repos/passenger-stack/Passenger/branches/main
