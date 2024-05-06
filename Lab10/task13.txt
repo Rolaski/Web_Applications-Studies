@@ -1,0 +1,49 @@
+REST (Representational State Transfer):
+REST (Representational State Transfer) jest stylem architektury oprogramowania, który definiuje zbiór zasad i ograniczeń dla tworzenia interfejsów aplikacji internetowych (API). Architektura REST jest oparta na zasadzie, że zasoby są reprezentowane jako zasoby internetowe, a dostęp do nich jest realizowany za pomocą standardowych operacji HTTP.
+
+REST API (RESTful API):
+RESTful API jest interfejsem programistycznym opartym na architekturze REST, który umożliwia komunikację między klientem a serwerem za pomocą standardowych operacji HTTP, takich jak GET, POST, PUT, DELETE. RESTful API zwraca dane w formacie takim jak JSON lub XML.
+
+6 zasad REST API:
+Identyfikacja zasobów: Każdy zasób w systemie powinien być jednoznacznie identyfikowalny za pomocą URI.
+Reprezentacja zasobów: Zasoby powinny być reprezentowane w postaci odpowiedzi, na przykład w formacie JSON lub XML.
+Manipulacja zasobami za pomocą odpowiednich metod HTTP: Operacje na zasobach powinny być wykonywane za pomocą odpowiednich metod HTTP (GET, POST, PUT, DELETE).
+HATEOAS (Hypertext As The Engine Of Application State): Klient powinien otrzymać informacje o dostępnych akcjach (linkach) w odpowiedzi na żądanie.
+Bezstanowość: Serwer nie przechowuje stanu klienta między żądaniami. Wszystkie informacje potrzebne do zrozumienia żądania są zawarte w samym żądaniu.
+Warstwowość: System powinien być zorganizowany w hierarchiczną strukturę warstwową.
+Endpointy i zasoby:
+Endpointy: Są to konkretne punkty końcowe (URL) interfejsu API, które pozwalają na dostęp do określonych zasobów.
+Zasoby (Resources): Są to obiekty lub dane, do których można uzyskać dostęp za pomocą API, identyfikowane za pomocą URI.
+Operacje CRUD na zasobach:
+CRUD (Create, Read, Update, Delete): Operacje na danych zasobach:
+Create (POST): Tworzenie nowego zasobu.
+Read (GET): Pobieranie danych zasobu.
+Update (PUT/PATCH): Aktualizacja istniejącego zasobu.
+Delete (DELETE): Usuwanie zasobu.
+Model dojrzałości API Richardsona:
+Model dojrzałości API Richardsona to ramowy model klasyfikacji interfejsów API na różne poziomy, od 0 do 3. Obejmuje on stopniowe wprowadzanie zasad REST w API.
+
+Metody HTTP na 2. poziomie dojrzałości:
+Na 2. poziomie dojrzałości API Richardsona wykorzystuje się przede wszystkim metody HTTP GET, POST, PUT i DELETE.
+
+Kody HTTP (najczęstsze zastosowanie):
+200 OK: Sukces - żądanie zostało pomyślnie wykonane.
+201 Created: Zasób został pomyślnie utworzony.
+204 No Content: Sukces - żądanie wykonane, ale brak treści do zwrócenia.
+400 Bad Request: Błąd - żądanie jest niepoprawne.
+401 Unauthorized: Błąd - brak autoryzacji.
+403 Forbidden: Błąd - dostęp zabroniony.
+404 Not Found: Błąd - zasób nie został znaleziony.
+405 Method Not Allowed: Błąd - metoda HTTP nie jest dozwolona dla danego zasobu.
+422 Unprocessable Entity: Błąd - żądanie jest poprawne, ale nie może zostać przetworzone.
+500 Internal Server Error: Błąd - problem po stronie serwera.
+Ocena poziomu dojrzałości API GitHub’a:
+GitHub API osiąga wysoki poziom dojrzałości według modelu Richardsona. Udostępnia on bogaty zestaw zasobów, interfejsy RESTful, dobre wersjonowanie, zasady HATEOAS i obsługę różnych operacji CRUD.
+
+Wersjonowanie API:
+Wersjonowanie API polega na określeniu wersji interfejsu API w adresie URL (np. https://api.github.com/v3). Pozwala to na kontrolę i zapewnienie kompatybilności wstecznej w przypadku zmian w API.
+
+Czy API GitHub’a jest wersjonowane?
+Tak, API GitHub’a jest wersjonowane. Obecna wersja API to v3, a numer wersji jest zwykle uwzględniany w adresie URL żądania.
+
+Przedstawiłem podstawowe informacje na temat REST API, Richardson Maturity Model oraz szczegółowe omówienie poziomów dojrzałości, metod HTTP i kodów odpowiedzi, a także ocenę dojrzałości API GitHub’a. Zapraszam do dalszego zgłębiania tych tematów za pomocą dostępnych zasobów internetowych i dokumentacji.
