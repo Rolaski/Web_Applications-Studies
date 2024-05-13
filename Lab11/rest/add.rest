@@ -1,0 +1,14 @@
+# Dodanie nowego kraju
+POST http://localhost:8000/api/countries
+Content-Type: application/json
+
+{
+  "name": "Francja",
+  "code": "FR",
+  "currency": "euro",
+  "area": 551695,
+  "language": "Francuski"
+}
+
+
+

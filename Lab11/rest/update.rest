@@ -1,0 +1,11 @@
+# Aktualizacja istniejącego kraju byczku
+PUT http://localhost:8000/api/countries/8
+Content-Type: application/json
+
+{
+  "name": "Litwa",
+  "code": "LT",
+  "currency": "euro",
+  "area": 65300 ,
+  "language": "Litewski"
+}

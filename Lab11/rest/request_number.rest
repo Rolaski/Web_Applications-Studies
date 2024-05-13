@@ -1,0 +1,2 @@
+# Pobranie konkretnego kraju
+GET http://localhost:8000/api/countries/3

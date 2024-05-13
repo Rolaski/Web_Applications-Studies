@@ -1,0 +1,2 @@
+# Usunięcie kraju
+DELETE http://localhost:8000/api/countries/7
