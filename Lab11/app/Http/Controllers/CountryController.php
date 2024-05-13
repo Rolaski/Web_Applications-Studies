@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\DB;
 class CountryController extends Controller
 {
     /**
-     * Pobierz wszystkie kraje z bazy danych.
-     * Przekształć kraje na przekształcone obiekty JSON i zwróć je jako tablicę JSON z obiektami i status 200.
+     * Pobieranie wszystkich krajow z bazy
+     * Przekształć kraje na obiekty JSON i zwróc jako tablice z statusem 200
      */
     public function index()
 {
@@ -41,9 +41,10 @@ class CountryController extends Controller
 
 
     /**
-     * Pobierz kraj o danym id_kraju z bazy danych.
+     * Pobieranie kraju o danym id
      * Przekształć kraj na przekształcony obiekt JSON i zwróć go jako obiekt JSON z status 200, jeśli istnieje.
-     * Zwróć status 404, jeśli kraj nie istnieje.
+     * Status 200 - jesli istnieje
+     * Status 404 - jesli nie istnieje
      */
     public function show($id)
     {
@@ -133,9 +134,9 @@ class CountryController extends Controller
     }
 
     /**
- * Usuń kraj o danym id_kraju z bazy danych.
- * Zwróć odpowiedni status HTTP w zależności od wyniku operacji.
- */
+    * Usuń kraj o danym id_kraju z bazy danych.
+    * Zwróć odpowiedni status HTTP w zależności od wyniku operacji.
+    */
     public function destroy($id)
     {
         $country = Country::find($id);
